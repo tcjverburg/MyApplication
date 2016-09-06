@@ -2,6 +2,9 @@ package com.example.gebruiker.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,4 +13,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    public void onCheckboxClicked(View view) {
+        // Is the view now checked?
+        boolean checked = ((CheckBox) view).isChecked();
+        ImageView  eyes = (ImageView) findViewById(R.id.eyes);
+        switch(view.getId()) {
+            case R.id.check_eyes:
+                if (checked) {
+                    eyes.setVisibility(View.VISIBLE);
+                } else {
+                    eyes.setVisibility(View.INVISIBLE);
+                }
+                ;
+
+        }
+    }
 }
+
