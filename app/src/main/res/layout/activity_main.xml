@@ -29,7 +29,7 @@
         android:id="@+id/arms"
         android:src="@drawable/arms"
         />
-    />
+    
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -141,9 +141,9 @@
         android:id="@+id/check_glasses"
         android:checked="true"
         android:onClick="onCheckboxClicked"
-        android:layout_above="@+id/check_hat"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/check_mouth"
+        android:layout_alignLeft="@+id/check_mouth"
+        android:layout_alignStart="@+id/check_mouth" />
 
     <CheckBox
         android:layout_width="wrap_content"
